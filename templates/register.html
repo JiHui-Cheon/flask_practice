@@ -1,0 +1,43 @@
+{% extends 'layouts.html' %}
+{% block body %}
+<div class="main-container">
+<!-- horizontal Basic Forms Start -->
+<div class="pd-20 card-box mb-30">
+    <div class="clearfix">
+        <div class="pull-left">
+            <h4 class="text-blue h4">Register Board</h4>
+            <p class="mb-30">Input your information!!</p>
+        </div>
+        
+    </div>
+    <form action="/register" method="POST" onsubmit="return confirm('회원가입을 완료하시겠습니까?')">
+        <div class="form-group">
+            <label>NAME</label>
+            <input class="form-control" type="txt" name='name' placeholder="input your name" required>
+        </div>      
+        <div class="form-group">
+            <label>EMAIL</label>
+            <textarea class="form-control" name="email" placeholder="input your email" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>USERNAME</label>
+            <input type="text" name='username' class="form-control" placeholder="input your username" required>           
+        </div>
+        <div class="form-group">
+            <label>PASSWORD</label>
+            <input class="form-control" type="password" name="password" placeholder="input your password" required></textarea>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-warning btn-lg btn-block" type="submit" value="회원가입" >
+        </div>
+        <div class="form-group">
+            <a class="btn btn-primary btn-lg btn-block" href="/"> 취소 </a>
+            
+        </div>
+    </form>
+    
+</div>
+​
+<!-- horizontal Basic Forms End -->
+</div>
+{% endblock %}
